@@ -10,10 +10,10 @@
 def detectarPrimos(arrayPrim,n):
   noprimo=0
   for i in range(2,n):
-    for j in range(1,i):
+    for j in range(2,int(i**0.5)+1):
       if i % j == 0:
         noprimo+=1
-    if noprimo<2:
+    if noprimo==0:
       arrayPrim.append(i)
     noprimo=0
   return arrayPrim
